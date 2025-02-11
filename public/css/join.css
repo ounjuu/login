@@ -1,0 +1,13 @@
+.emailBtn {
+  background-color: violet;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid gray;
+  font-size: 10px;
+  margin-left: 10px;
+}
+
+.emailBox {
+  display: flex;
+}

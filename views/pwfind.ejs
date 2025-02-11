@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>로그인</h2>
+      <% if (errorMessage) { %>
+      <p class="error"><%= errorMessage %></p>
+      <% } %>
+      <form action="/login" method="POST">
+        <label for="email">이메일</label>
+        <input type="email" id="email" name="email" required />
+
+        <label for="password">비밀번호</label>
+        <input type="password" id="password" name="password" required />
+
+        <button type="submit">로그인</button>
+      </form>
+      <p><a href="/register">아이디 찾기</a></p>
+      <p><a href="/register">비밀번호 찾기</a></p>
+      <p><a href="/register">회원가입</a></p>
+    </div>
+  </body>
+</html>
