@@ -17,11 +17,16 @@ app.set("views", "./views"); // ejs 파일 위치 설정
 app.set("views", path.join(__dirname, "/views"));
 
 let data = [];
-
+let logindata = [];
 // post 요청은 req.body
 app.post("/login", (req, res) => {
   data = req.body;
-  res.render("login", { title: `${req.body.name}님 환영합니다.` });
+  res.render("login");
+});
+
+app.post("/loginfn", (req, res) => {
+  logindata = req.body;
+  res.render("loginfn", { title: `${req.body.name}님 환영합니다.` });
 });
 
 app.get("/", (req, res) => {
@@ -30,6 +35,10 @@ app.get("/", (req, res) => {
 
 app.get("/userinfo", (req, res) => {
   res.json(data);
+});
+
+app.get("/logininfo", (req, res) => {
+  res.json(logindata);
 });
 
 // 서버 띄울때 포트 정보 셋팅 및 처음 실행 시 필요한 기능 수행 가능

@@ -1,13 +1,193 @@
-.emailBtn {
-  background-color: violet;
-  width: 60px;
-  height: 20px;
-  border-radius: 10px;
-  border: 1px solid gray;
-  font-size: 10px;
-  margin-left: 10px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.emailBox {
+html,
+body {
+  height: 100%;
+  margin: 0;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+}
+
+.login-box {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box; /* Prevents content from spilling out */
+  overflow: auto; /* Allows content to scroll if needed */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+.formdiv {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="email"],
+input[type="text"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+
+input[type="radio"] {
+  margin-right: 5px;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+select:focus {
+  border-color: #5e7ce2;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #5e7ce2;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+}
+
+button[type="submit"]:hover:not(:disabled) {
+  opacity: 1;
+}
+
+.emailBtn,
+.phoneText,
+.nameText,
+.pwText,
+.pwReText,
+.genderText,
+.birthText {
+  font-size: 12px;
+  color: #888;
+  margin-top: 5px;
+}
+
+.genderBox {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.gender {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.phoneBox {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+.phoneBox input {
+  width: 33%;
+}
+
+.birthBox {
+  display: flex;
+  gap: 10px;
+}
+
+.birbox {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.birbox option {
+  font-size: 14px;
+}
+
+@media (max-width: 480px) {
+  .login-box {
+    padding: 20px;
+    width: 90%;
+  }
+
+  button[type="submit"] {
+    padding: 10px;
+  }
+
+  .phoneBox {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .phoneBox input {
+    width: 100%;
+  }
+
+  .birthBox {
+    flex-direction: column;
+  }
+
+  .birbox {
+    width: 100%;
+  }
+}
+.emailBtn {
+  background-color: #5e7ce2;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  width: auto;
+  display: inline-block;
+  margin-top: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.emailBtn:hover {
+  background-color: #4a6ab8;
+}
+
+.emailBtn:active {
+  background-color: #3e5798;
+}
+
+.emailBtn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }

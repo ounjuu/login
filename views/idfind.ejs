@@ -3,7 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>아이디 찾기</title>
   </head>
-  <body></body>
+  <body>
+    <div class="find-container">
+      <form action="/find-id" method="post" class="findForm">
+        <h2>아이디 찾기</h2>
+
+        <div class="formWrap">
+          <label for="phone1">전화번호</label><br />
+          <input
+            type="text"
+            name="phone1"
+            id="phone1"
+            placeholder="010"
+            size="3"
+            maxlength="3"
+            required
+          />
+          -
+          <input
+            type="text"
+            name="phone2"
+            id="phone2"
+            placeholder="0000"
+            size="4"
+            maxlength="4"
+            required
+          />
+          -
+          <input
+            type="text"
+            name="phone3"
+            id="phone3"
+            placeholder="0000"
+            size="4"
+            maxlength="4"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <button type="submit" class="find-button">아이디 찾기</button>
+        </div>
+
+        <div class="form-footer">
+          <a href="/login" class="login-link">로그인 화면으로 돌아가기</a>
+          <a href="/register" class="register-link">회원가입</a>
+        </div>
+      </form>
+    </div>
+  </body>
 </html>

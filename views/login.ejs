@@ -6,7 +6,43 @@
     <title>login</title>
   </head>
   <body>
-    <h5><%= title %></h5>
+    <div class="login-container">
+      <form action="/loginfn" method="post" class="loginForm">
+        <div class="formWrap">
+          <label for="email">아이디 (이메일)</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="이메일을 입력해주세요."
+            required
+            class="email-input"
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">비밀번호</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="비밀번호를 입력해주세요."
+            required
+            class="pw-input"
+          />
+        </div>
+        <div class="loginFail"></div>
+        <div class="form-group">
+          <button type="submit" class="login-button">로그인</button>
+        </div>
+
+        <div class="form-footer">
+          <a href="/idfind" class="find-email">아이디 찾기</a>
+          <a href="/pwfind" class="find-pw">비밀번호 찾기</a>
+          <a href="/" class="join-link">회원가입</a>
+        </div>
+      </form>
+    </div>
   </body>
   <script src="/js/login.js"></script>
 </html>

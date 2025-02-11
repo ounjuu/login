@@ -10,8 +10,6 @@ fetch("/userinfo")
       login_data.push(data);
       localStorage.setItem("data", JSON.stringify(login_data));
     }
-    console.log(login_data, "??");
-    emailCheckData(login_data);
   })
   .catch((e) => {
     console.error("에러 발생!", e);
