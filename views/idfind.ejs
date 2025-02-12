@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/idfind.css" />
     <title>아이디 찾기</title>
   </head>
   <body>
     <div class="find-container">
       <form action="/find-id" method="post" class="findForm">
         <h2>아이디 찾기</h2>
-
         <div class="formWrap">
-          <label for="phone1">전화번호</label><br />
+          <label for="phone1">전화번호로 찾기</label><br />
           <input
             type="text"
             name="phone1"
@@ -21,7 +21,7 @@
             maxlength="3"
             required
           />
-          -
+
           <input
             type="text"
             name="phone2"
@@ -31,7 +31,7 @@
             maxlength="4"
             required
           />
-          -
+
           <input
             type="text"
             name="phone3"
@@ -42,16 +42,17 @@
             required
           />
         </div>
-
+        <div class="phoneText"></div>
         <div class="form-group">
           <button type="submit" class="find-button">아이디 찾기</button>
         </div>
 
         <div class="form-footer">
           <a href="/login" class="login-link">로그인 화면으로 돌아가기</a>
-          <a href="/register" class="register-link">회원가입</a>
+          <a href="/" class="register-link">회원가입</a>
         </div>
       </form>
     </div>
+    <script src="/js/idfind.js"></script>
   </body>
 </html>

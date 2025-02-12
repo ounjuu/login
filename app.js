@@ -18,15 +18,12 @@ app.set("views", path.join(__dirname, "/views"));
 
 let data = [];
 let logindata = [];
+let name = [];
+let query = [];
 // post 요청은 req.body
 app.post("/login", (req, res) => {
   data = req.body;
   res.render("login");
-});
-
-app.post("/loginfn", (req, res) => {
-  logindata = req.body;
-  res.render("loginfn", { title: `${req.body.name}님 환영합니다.` });
 });
 
 app.get("/", (req, res) => {
@@ -41,7 +38,48 @@ app.get("/logininfo", (req, res) => {
   res.json(logindata);
 });
 
-// 서버 띄울때 포트 정보 셋팅 및 처음 실행 시 필요한 기능 수행 가능
+// app.get("/loginfninfo", (req, res) => {
+//   res.json(name);
+// });
+// 로그인 정보 (POST 방식으로 받음)
+// 여기부터
+// app.post("/loginfn", (req, res) => {
+//   name = req.body;
+//   let email = req.body.email;
+//   let password = req.body.password;
+//   // 로컬스토리지 데이터를 대신할 임시 로그인 데이터
+//   const loginData = JSON.parse(localStorage.getItem("data")) || [];
+//   let user = loginData.find(
+//     (user) => user.email === email && user.password === password
+//   );
+
+//   if (user.length > 0) {
+//     // 로그인 성공 시
+//     query = email; // query에 이메일 저장
+//     res.json({ query });
+//   }
+// });
+
+// app.get("/loginfninfo", (req, res) => {
+//   res.json({ email: query }); // 이메일 값을 JSON 형태로 반환
+// });
+
+app.get("/loginfn", (req, res) => {
+  res.render("loginfn", { username: req.query });
+});
+
+app.get("/idfind", (req, res) => {
+  res.render("idfind");
+});
+
+app.get("/pwfind", (req, res) => {
+  res.render("pwfind");
+});
+
+app.get("/login", (req, res) => {
+  res.render("login");
+});
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });

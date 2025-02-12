@@ -3,11 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/login.css" />
     <title>login</title>
   </head>
   <body>
     <div class="login-container">
-      <form action="/loginfn" method="post" class="loginForm">
+      <form class="loginForm">
+        <!-- <form action="/loginfn" method="POST" class="loginForm"> -->
         <div class="formWrap">
           <label for="email">아이디 (이메일)</label><br />
           <input
@@ -19,7 +21,7 @@
             class="email-input"
           />
         </div>
-
+        <div class="emailText"></div>
         <div class="form-group">
           <label for="password">비밀번호</label><br />
           <input
@@ -31,6 +33,7 @@
             class="pw-input"
           />
         </div>
+        <div class="pwText"></div>
         <div class="loginFail"></div>
         <div class="form-group">
           <button type="submit" class="login-button">로그인</button>

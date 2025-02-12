@@ -3,26 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="/css/pwfind.css" />
+    <title>pwfind</title>
   </head>
   <body>
-    <div class="login-container">
-      <h2>로그인</h2>
-      <% if (errorMessage) { %>
-      <p class="error"><%= errorMessage %></p>
-      <% } %>
-      <form action="/login" method="POST">
-        <label for="email">이메일</label>
-        <input type="email" id="email" name="email" required />
+    <div class="find-container">
+      <form action="/find-pw" method="post" class="findForm">
+        <h2>비밀번호 찾기</h2>
 
-        <label for="password">비밀번호</label>
-        <input type="password" id="password" name="password" required />
+        <div class="formWrap">
+          <label for="id">이메일</label><br />
+          <input
+            type="email"
+            name="eamil"
+            id="email"
+            placeholder="이메일을 입력하세요."
+            required
+          />
+        </div>
+        <div class="emailText"></div>
+        <div class="form-group">
+          <button type="submit" class="find-button">비밀번호 찾기</button>
+        </div>
 
-        <button type="submit">로그인</button>
+        <div class="form-footer">
+          <a href="/login" class="login-link">로그인 화면으로 돌아가기</a>
+          <a href="/" class="register-link">회원가입</a>
+        </div>
       </form>
-      <p><a href="/register">아이디 찾기</a></p>
-      <p><a href="/register">비밀번호 찾기</a></p>
-      <p><a href="/register">회원가입</a></p>
     </div>
+
+    <script src="/js/pwfind.js"></script>
   </body>
 </html>

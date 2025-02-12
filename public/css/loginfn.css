@@ -1,0 +1,56 @@
+/* 기본적인 리셋과 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 100%;
+  max-width: 600px;
+}
+
+.welcome-text {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.welcome-text span {
+  color: #4caf50; /* 환영하는 사람의 이름을 강조할 색상 */
+}
+
+footer {
+  font-size: 14px;
+  color: #777;
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* 추가적인 배경 스타일 */
+.container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(76, 175, 80, 0.1); /* 부드러운 초록색 배경 */
+  border-radius: 8px;
+  z-index: -1; /* 텍스트 뒤로 배치 */
+}

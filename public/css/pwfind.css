@@ -1,0 +1,93 @@
+/* 기본적인 리셋과 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.find-container {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.formWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+input[type="email"] {
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-top: 8px;
+}
+
+input[type="email"]:focus {
+  outline: none;
+  border-color: #4caf50;
+}
+
+button.find-button {
+  background-color: #8e44ad; /* 보라색 버튼 */
+  color: #fff;
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button.find-button:hover {
+  background-color: #9b59b6; /* 보라색 버튼의 hover 효과 */
+}
+
+.form-footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.form-footer a {
+  color: #8e44ad; /* 보라색 링크 */
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.form-footer a:hover {
+  text-decoration: underline;
+}
+
+.emailText {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
