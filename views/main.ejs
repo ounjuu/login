@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <button onclick="onClick()">axios 요청하기</button>
+  </body>
+  <script>
+    const data = {
+      id: 1,
+      name: "김김김",
+      age: 24,
+    };
+    // axios 요청 테스트
+    const onClick = () => {
+      axios({
+        method: "get",
+        url: "/axiosget",
+        params: data,
+      }).then((res) => {
+        console.log(res, "뭐라고 나오니?");
+      });
+    };
+  </script>
+</html>

@@ -77,6 +77,8 @@ const pwOninput = () => {
     pwCheck = true;
   }
   validCheck();
+
+  console.log(pwCheck, "??");
 };
 
 // 비밀번호 같은지 검사
@@ -145,10 +147,10 @@ const phone = (x) => {
   if (isValidPhone1 && isValidPhone2 && isValidPhone3) {
     phoneCheck = true;
     phoneText.innerText = "";
+    validCheck();
   } else {
     phoneCheck = false;
   }
-  // console.log(phoneCheck, "Dfdf");
   validCheck();
 };
 

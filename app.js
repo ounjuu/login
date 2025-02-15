@@ -26,6 +26,11 @@ app.post("/login", (req, res) => {
   res.render("login");
 });
 
+// app.get("/", (req, res) => {
+//   res.render("main");
+// });
+
+// 이거 다시
 app.get("/", (req, res) => {
   res.render("join");
 });
@@ -62,6 +67,11 @@ app.get("/logininfo", (req, res) => {
 
 // app.get("/loginfninfo", (req, res) => {
 //   res.json({ email: query }); // 이메일 값을 JSON 형태로 반환
+// });
+
+// app.get("/axiosget", (req, res) => {
+//   console.log(req.query, "dfdfd");
+//   res.send({ title: "왔다!" });
 // });
 
 app.get("/loginfn", (req, res) => {

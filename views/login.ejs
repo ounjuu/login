@@ -11,17 +11,17 @@
       <form class="loginForm">
         <!-- <form action="/loginfn" method="POST" class="loginForm"> -->
         <div class="formWrap">
-          <label for="email">아이디 (이메일)</label><br />
+          <label for="id">아이디</label><br />
           <input
-            type="email"
-            id="email"
-            name="email"
+            type="id"
+            id="id"
+            name="id"
             placeholder="이메일을 입력해주세요."
             required
-            class="email-input"
+            class="id-input"
           />
         </div>
-        <div class="emailText"></div>
+        <div class="idText"></div>
         <div class="form-group">
           <label for="password">비밀번호</label><br />
           <input
@@ -36,9 +36,10 @@
         <div class="pwText"></div>
         <div class="loginFail"></div>
         <div class="form-group">
-          <button type="submit" class="login-button">로그인</button>
+          <button type="submit" class="login-button" onclick="login()">
+            로그인
+          </button>
         </div>
-
         <div class="form-footer">
           <a href="/idfind" class="find-email">아이디 찾기</a>
           <a href="/pwfind" class="find-pw">비밀번호 찾기</a>
