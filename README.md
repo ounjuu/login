@@ -40,8 +40,3 @@
 
 <img width="50%" src="https://github.com/user-attachments/assets/48970311-78f4-4e29-87a6-3f2d0761b71c"/>
 
-
-## :hammer: 향후 계획
-###### :star: 
-
-
