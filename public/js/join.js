@@ -32,12 +32,15 @@ function emailCheckData(login_data) {
     if (sameEmail.length > 0) {
       emailText.innerHTML = "중복입니다. 다른 이메일을 입력해주세요.";
       emailCheck = false;
+      validCheck();
     } else if (!strictEmailRegex.test(emailInputText)) {
       emailText.innerHTML = "이메일 형식으로 입력하세요.";
       emailCheck = false;
+      validCheck();
     } else if (emailInputText === "") {
       emailText.innerHTML = "이메일을 입력하세요.";
       emailCheck = false;
+      validCheck();
     } else {
       emailText.innerHTML = "사용 가능한 이메일입니다.";
       emailCheck = true;
@@ -246,6 +249,19 @@ function validCheck() {
   }
 }
 
+const resetdata = () => {
+  document.querySelector(".emailInput").value = "";
+  document.querySelector("#nameInput").value = "";
+  document.querySelector("#pwInput").value = "";
+  document.querySelector(".phoneNum1").value = "";
+  document.querySelector(".phoneNum2").value = "";
+  document.querySelector(".phoneNum3").value = "";
+  document.getElementById("birth-year").value = "";
+  document.getElementById("birth-month").value = "";
+  document.getElementById("birth-day").value = "";
+  document.querySelector('input[name="gender"]:checked').value;
+};
+
 const signbtnClick = () => {
   const emailInputvalue = document.querySelector(".emailInput").value;
   const namedataupvalue = document.querySelector("#nameInput").value;
@@ -281,4 +297,5 @@ const signbtnClick = () => {
     login_data2.push(inputData);
     localStorage.setItem("data", JSON.stringify(login_data2));
   }
+  // resetdata();
 };
