@@ -83,7 +83,6 @@ loginBtn.addEventListener("click", (event) => {
 
 /// fn 로 넘기기
 let email = [];
-let localdata = JSON.parse(localStorage.getItem("data")) || [];
 
 const emailInput = document.querySelector(".email-input");
 const pwInput = document.querySelector(".pw-input");
@@ -92,7 +91,8 @@ document
   .querySelector(".login-button")
   .addEventListener("click", function (event) {
     event.preventDefault();
-    let emailInput = document.querySelector(".email-input");
+    let localdata = JSON.parse(localStorage.getItem("data")) || [];
+    let emailInput = document.querySelector(".id-input");
     let pwInput = document.querySelector(".pw-input");
     let sameEmail = localdata.filter((item) => item.email === emailInput.value);
 

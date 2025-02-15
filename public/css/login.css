@@ -35,14 +35,13 @@ h2 {
 .formWrap {
   display: flex;
   flex-direction: column; /* 세로 정렬 */
-  align-items: flex-start;
+  align-items: center;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .formWrap label {
-  font-weight: bold;
   margin-bottom: 8px;
-  text-align: left; /* 레이블 왼쪽 정렬 */
 }
 
 input[type="email"],

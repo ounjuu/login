@@ -42,38 +42,6 @@ app.get("/userinfo", (req, res) => {
 app.get("/logininfo", (req, res) => {
   res.json(logindata);
 });
-
-// app.get("/loginfninfo", (req, res) => {
-//   res.json(name);
-// });
-// 로그인 정보 (POST 방식으로 받음)
-// 여기부터
-// app.post("/loginfn", (req, res) => {
-//   name = req.body;
-//   let email = req.body.email;
-//   let password = req.body.password;
-//   // 로컬스토리지 데이터를 대신할 임시 로그인 데이터
-//   const loginData = JSON.parse(localStorage.getItem("data")) || [];
-//   let user = loginData.find(
-//     (user) => user.email === email && user.password === password
-//   );
-
-//   if (user.length > 0) {
-//     // 로그인 성공 시
-//     query = email; // query에 이메일 저장
-//     res.json({ query });
-//   }
-// });
-
-// app.get("/loginfninfo", (req, res) => {
-//   res.json({ email: query }); // 이메일 값을 JSON 형태로 반환
-// });
-
-// app.get("/axiosget", (req, res) => {
-//   console.log(req.query, "dfdfd");
-//   res.send({ title: "왔다!" });
-// });
-
 app.get("/loginfn", (req, res) => {
   res.render("loginfn", { username: req.query });
 });

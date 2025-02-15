@@ -8,7 +8,7 @@ fetch("/userinfo")
 
     let datas = login_data.filter((x) => x.email === data.email);
 
-    if (datas.length === 0) {
+    if (datas.length < 1) {
       login_data.push(data);
       localStorage.setItem("data", JSON.stringify(login_data));
     }
@@ -229,6 +229,7 @@ const checkAge = () => {
 
 // 유효성 검사
 let signbtn = document.querySelector("#sign");
+
 function validCheck() {
   if (
     emailCheck === true &&
@@ -244,3 +245,40 @@ function validCheck() {
     signbtn.disabled = true;
   }
 }
+
+const signbtnClick = () => {
+  const emailInputvalue = document.querySelector(".emailInput").value;
+  const namedataupvalue = document.querySelector("#nameInput").value;
+  const pwdataupvalue = document.querySelector("#pwInput").value;
+  const phoneNum1value = document.querySelector(".phoneNum1").value;
+  const phoneNum2value = document.querySelector(".phoneNum2").value;
+  const phoneNum3value = document.querySelector(".phoneNum3").value;
+  const yearSelectvalue = document.getElementById("birth-year").value;
+  const monthSelectvalue = document.getElementById("birth-month").value;
+  const daySelectvalue = document.getElementById("birth-day").value;
+  const selectedValue = document.querySelector(
+    'input[name="gender"]:checked'
+  ).value;
+
+  let inputData = {
+    email: emailInputvalue,
+    name: namedataupvalue,
+    pw: pwdataupvalue,
+    gender: selectedValue,
+    phone1: phoneNum1value,
+    phone2: phoneNum2value,
+    phone3: phoneNum3value,
+    year: yearSelectvalue,
+    month: monthSelectvalue,
+    day: daySelectvalue,
+  };
+
+  let login_data2 = JSON.parse(localStorage.getItem("data")) || []; // 기존
+
+  let datas2 = login_data2.filter((x) => x.email === inputData.email);
+
+  if (datas2.length < 1) {
+    login_data2.push(inputData);
+    localStorage.setItem("data", JSON.stringify(login_data2));
+  }
+};
